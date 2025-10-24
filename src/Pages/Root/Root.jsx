@@ -8,7 +8,7 @@ const Root = () => {
         <div className='max-w-[1200px] mx-auto'>
             <Navbar></Navbar>
             <Outlet></Outlet>
-            <Footer></Footer>
+            <Footer className='w-full'></Footer>
         </div>
     );
 };
