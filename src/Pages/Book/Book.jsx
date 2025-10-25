@@ -6,7 +6,6 @@ const Book = ({ book }) => {
   // console.log(data)
 
   const { bookId, image, bookName, author, tags, rating } = book;
-  console.log(book);
   return (
     <Link to={`/bookDetails/${bookId}`}>
       <div className="mx-4 md:mx-0 p-5 rounded-2xl border-2 border-gray-300 space-y-5">
@@ -19,8 +18,8 @@ const Book = ({ book }) => {
           <div className="border-1 border-dashed"></div>
           <div className="flex justify-between items-center">
             <div className="flex justify-center gap-3 ">
-              {tags.map((tag) => (
-                <button className="bg-green-300 p-2 rounded-2xl">{tag}</button>
+              {tags.map((tag, index) => (
+                <button key={index} className="bg-green-300 p-2 rounded-2xl">{tag}</button>
               ))}
             </div>
             <p className="font-medium text-[24px] flex justify-center items-center gap-2">
