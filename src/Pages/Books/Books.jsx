@@ -1,7 +1,8 @@
 import React, { Suspense, useEffect, useState } from "react";
 import Book from "../Book/Book";
+import { useLoaderData } from "react-router";
 
-const Books = ({data}) => {
+const Books = () => {
   // const [allBooks, setAllBooks] = useState([]);
 
   // useEffect( () => {
@@ -10,6 +11,8 @@ const Books = ({data}) => {
   // }, [])
 
   // const bookPromise = fetch("booksData.json").then((res) => res.json());
+
+  const data = useLoaderData()
 
   return (
     <div>
